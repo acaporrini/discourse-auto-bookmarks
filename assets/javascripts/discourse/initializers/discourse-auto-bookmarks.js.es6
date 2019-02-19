@@ -23,7 +23,7 @@ function initializeAutoBookmark(api) {
 }
 
 export default {
-  name: "auto-bookmarks",
+  name: "discourse-auto-bookmarks",
 
   initialize() {
     withPluginApi("0.8.24", initializeAutoBookmark);

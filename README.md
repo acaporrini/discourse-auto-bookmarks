@@ -1,6 +1,6 @@
-# AutoBookmarks
+# discourse-auto-bookmarks
 
-AutoBookmarks is a plugin for adding automatic HTML bookmarks to topics and easily get a sharable link which points at specific parts of the text.
+discourse-auto-bookmarks is a [Discourse](https://github.com/discourse/discourse) plugin for adding automatic HTML bookmarks to topics and easily get a sharable link which points at specific parts of the text.
 
 ## Installation
 
@@ -24,7 +24,7 @@ Right click the bookmark icon and select "Copy link address":
 
 Now you can share this bookmark link, it will open the topic exactly at the point where the bookmark is.
 ## Testing
-To run tests in your local environment visit [http://localhost:3000/qunit?qunit_skip_core=1&qunit_single_plugin=AutoBookmarks](http://localhost:3000/qunit?qunit_skip_core=1&qunit_single_plugin=AutoBookmarks)
+To run tests in your local environment visit [http://localhost:3000/qunit?qunit_skip_core=1&qunit_single_plugin=discourse-auto-bookmarks](http://localhost:3000/qunit?qunit_skip_core=1&qunit_single_plugin=discourse-auto-bookmarks)
 ## Feedback
 
 If you have issues or suggestions for the plugin, please bring them up on

@@ -1,5 +1,5 @@
 import { acceptance } from "helpers/qunit-helpers";
-acceptance("AutoBookmarks", { loggedIn: true });
+acceptance("discourse-auto-bookmarks", { loggedIn: true });
 
 test("add ID to header", assert => {
   visit("/");
