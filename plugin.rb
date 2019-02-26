@@ -3,3 +3,4 @@
 # version: 0.1
 # authors: acaporrini
 # url: https://github.com/acaporrini/discourse-auto-bookmarks
+register_asset "stylesheets/discourse-auto-bookmarks.scss"

@@ -5,16 +5,18 @@ function toSnakeCase(string){
   return string.toLowerCase().split(" ").join("-").replace(/[^A-Za-z0-9-]+/g,'')
 }
 function createBookmark(_, header){
-  var text = header.textContent
-  $(header).attr("id", toSnakeCase(text))
-
-  var bookmark_icon = " <a href='#" + toSnakeCase(text) + "'>" + iconHTML('bookmark') + "</a>"
+  let rawText = header.textContent
+  $(header).attr("id", toSnakeCase(rawText))
+  $(header).addClass("header-bookmark")
+  let spanText = "<span class='header-text'>" + rawText + "</span>"
+  let headerContent = "<a href='#" + toSnakeCase(rawText) + "' class='bookmark-link' hidden=true>" + iconHTML('bookmark')+  "</a>" + spanText
+  $(header).html(headerContent)
 
   $(header).hover(function(){
-    $(header).append(bookmark_icon)
+    $(this).find("a").show()
   },
   function(){
-    $(header).html(text)
+    $(this).find("a").hide()
   })
 }
 

@@ -22,21 +22,16 @@ test("show bookmark link on hover", assert => {
 
   fillIn(".d-editor-input", "# This is my H1 header for the test\n## This is h2, with special characters!");
 
+  let a = find("a[href='#this-is-my-h1-header-for-the-test']")
+  assert.equal(a.attr('style'), undefined)
+
   andThen(function() {
     let h1 = find('#this-is-my-h1-header-for-the-test');
     h1.mouseenter();
   });
 
   andThen(function() {
-    assert.ok(exists("a[href='#this-is-my-h1-header-for-the-test']"))
-  });
-
-  andThen(function() {
-    let h2 = find('#this-is-h2-with-special-characters');
-    h2.mouseenter();
-  });
-
-  andThen(function() {
-    assert.ok(exists("a[href='#this-is-h2-with-special-characters']"))
+    let a = find("a[href='#this-is-my-h1-header-for-the-test']")
+    assert.equal(a.attr('style'), "display: inline;")
   });
 })
